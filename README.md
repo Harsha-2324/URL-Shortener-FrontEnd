@@ -20,18 +20,33 @@ Watch a quick video demonstration of My URL Shortener Web Application:
 ## **Video: 1 Featuring** 🎥
    - `Register`: POST Data to MongoDB Database
    - `Login`: GET Data from MongoDB Database
+   - `URL Shortening`: You can convert long, complex URLs into concise, easy-to-share links.
+
+https://github.com/Harsha-2324/URL-Shortener-FrontEnd/assets/24225236/2ca83ebb-ee06-4ae2-8c76-a2dafad93338
+
+
+## **Video: 2 Featuring** 🎥
+   - `MongoDB User Data`: View User Data on MongoDB Database
+   - `JWT Token Generation`: For Secure user authentication
+   - `URL Clicks Count`: You can view the URL link's clicks count.
+
+https://github.com/Harsha-2324/URL-Shortener-FrontEnd/assets/24225236/5c590f42-6199-4764-b55b-5dc6101609eb
+
+
+## **Video: 3 Featuring** 🎥
    - `Forgot Password`: Mail Sent to Registered User's Mail ID using SMTP Protocol
    - `JWT Token Generation`: For Secure user authentication
    - `Reset Password`: PUT Data to MongoDB Database
    - `Login`: using New Password
-   
+   - `URL Shortening`: You can convert long, complex URLs into concise, easy-to-share links.
+
+https://github.com/Harsha-2324/URL-Shortener-FrontEnd/assets/24225236/cf3ce261-ff6e-42af-9880-5370f57fbf3d
 
 
-
-## **Video: 2 Featuring** 🎥
-   - `Email Validation`: Ensure user input email requirements for user security
-   - `Password Validation`: Ensure user input password requirements for user security
+## **Video: 4 Featuring** 🎥
    - `JWT Token Expiry`: After a Password Reset expiration for enhanced security
+
+https://github.com/Harsha-2324/URL-Shortener-FrontEnd/assets/24225236/d83faa23-3861-4dcb-9457-94a5468294dd
 
 
 
