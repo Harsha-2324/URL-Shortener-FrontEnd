@@ -172,33 +172,6 @@ function DashboardURL() {
        </div>
        
        } 
-      {/* <div className='mx-5'>
-
-      { monthlyURLlist.length &&
-        <table className="table table-success table-striped table-responsive-md mt-3 "> 
-        <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Date</th>
-        <th scope="col">Short URL</th>
-        <th scope="col">clicked</th>
-        <th scope="col">LongURL</th>
-      </tr>
-    </thead>
-    <tbody>
-        { monthlyURLlist.map((el,i) => 
-        <tr key={el.urlID}>
-           <th scope="row">{i+1}</th>
-           <td>{el.createdOn}</td>
-          <td><a value={el.urlID} href={`${serverURL}/${el.urlID}`} onClick={handleCount} target="_blank" >{el.shortURL}</a> </td>
-          <td>{el.clicked}</td>
-          <td>{el.longURL.substring(0,16)+"..."} </td>
-        </tr>
-        )}
-        </tbody>
-        </table>
-      }
-      </div>  */}
 
 </div>
     </>
