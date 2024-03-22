@@ -2,7 +2,7 @@
 
 Welcome to My URL Shortener Web Application! This URL Shortener is a powerful tool that allows you to convert long, complex URLs into concise and easy-to-share links. Built with React, Node.js, and MongoDB, our application provides users with a seamless and secure platform to shorten URLs and manage their shortened links efficiently. It allows users to securely login with their passwords using JWT authentication.
 
-## FrontEnd Netlify Deployed URL ⌛
+## FrontEnd Vercel Deployed URL ⌛
 
 🔸*Click on the Badge to Check out My URL Shortener Application Here*👉🏻 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ](https://url-shortener-front-end-three.vercel.app)
