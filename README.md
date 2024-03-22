@@ -25,7 +25,7 @@ Watch a quick video demonstration of My URL Shortener Web Application:
    - `Reset Password`: PUT Data to MongoDB Database
    - `Login`: using New Password
    
-<video controls src="public/image/URL Shortener App - Google Chrome 2024-03-22 21-10-56.mp4" title="Title"></video>
+
 
 
 ## **Video: 2 Featuring** 🎥
