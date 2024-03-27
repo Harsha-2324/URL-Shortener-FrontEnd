@@ -71,7 +71,7 @@ function CreateURL() {
       setError("log in to continue")
       window.alert("log in to continue")
     }
-
+    e.target.reset()
   }
   useEffect( () =>{
     let tokenAuth = localStorage.getItem("tokenAuth");

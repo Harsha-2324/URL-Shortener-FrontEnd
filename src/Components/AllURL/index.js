@@ -70,39 +70,51 @@ function AllURL() {
   },[isLogged,currentUser])
   return (
     <>
-      <h4 className=" text-decoration-underline mb-3"> All URLs </h4> 
-      <div className='d-flex flex-column justify-content-center align-items-center flex-wrap'>
+      <h4 className=" text-decoration-underline mb-3"> All URLs </h4>
+      <div className="d-flex flex-column justify-content-center align-items-center flex-wrap">
         <h5>Total URLs created by user : {urlList.length}</h5>
-        <div className=' w-75 overflow-auto'>
-
-      { urlList.length &&
-        <table className="table table-success table-striped table-responsive-md mt-3  "> 
-        <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Date</th>
-        <th scope="col">Short URL</th>
-        <th scope="col">clicked</th>
-        <th scope="col">LongURL</th>
-      </tr>
-    </thead>
-    <tbody>
-        { urlList.map((el,i) => 
-        <tr key={el.urlID}>
-           <th scope="row">{i+1}</th>
-           <td>{el.createdOn}</td>
-          <td><a id={el.urlID} className='text-decoration-none' href={`/${el.urlID}`} onClick={handleCount} target="_blank" rel="noreferrer" >{el.shortURL}</a> </td>
-          <td>{el.clicked}</td>
-          <td title={el.longURL}>{el.longURL.substring(0,20)+"..."} </td>
-        </tr>
-        )}
-        </tbody>
-        </table>
-      }     
-      </div> 
-      </div> 
+        <div className=" w-75 overflow-auto">
+          {urlList.length && (
+            <table className="table table-success table-striped table-responsive-md mt-3  ">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Short URL</th>
+                  <th scope="col">clicked</th>
+                  <th scope="col">LongURL</th>
+                </tr>
+              </thead>
+              <tbody>
+                {urlList.map((el, i) => (
+                  <tr key={el.urlID}>
+                    <th scope="row">{i + 1}</th>
+                    <td>{el.createdOn}</td>
+                    <td>
+                      <a
+                        id={el.urlID}
+                        className="text-decoration-none"
+                        href={`/${el.urlID}`}
+                        onClick={handleCount}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {el.shortURL}
+                      </a>{" "}
+                    </td>
+                    <td>{el.clicked}</td>
+                    <td title={el.longURL}>
+                      {el.longURL.toString().substring(0, 20) + "..."}{" "}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
 export default AllURL;

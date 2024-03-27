@@ -112,70 +112,87 @@ function DashboardURL() {
     }
 
   },[isLogged,currentUser])
-  return ( 
-      <>
-       {/* <LogButton/>  */}
-       <div className='dash text-dark'>
-       <h5 className="fs-4 text-decoration-underline mb-3"> URL Dashboard </h5> 
-       {!(localStorage.getItem("loggedUsername")) ? <h5 className='my-2'>Login to use the App</h5>
-       : <div className='container-fluid'>
-        <div className='row gx-3'>
-          <div className='col-md-4 col-sm-12'>
-          <div className='d-flex flex-column justify-content-center align-items-center'>
-              <h6> Past month activity : </h6> 
-              <h2> {monthlyURLlist.length}</h2>
-              <button className='btn btn-success my-2'>
-              <NavLink className="nav-link" to="/create-url">Create URL</NavLink>
-              </button> 
-              <button className='btn btn-danger my-2'>
-              <NavLink className="nav-link" to="/all-url">View all URLs</NavLink>
-              </button> 
+  return (
+    <>
+      {/* <LogButton/>  */}
+      <div className="dash text-dark">
+        <h5 className="fs-4 text-decoration-underline mb-3"> URL Dashboard </h5>
+        {!localStorage.getItem("loggedUsername") ? (
+          <h5 className="my-2">Login to use the App</h5>
+        ) : (
+          <div className="container-fluid">
+            <div className="row gx-3">
+              <div className="col-md-4 col-sm-12">
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  <h6> Past month activity : </h6>
+                  <h2> {monthlyURLlist.length}</h2>
+                  <button className="btn btn-success my-2">
+                    <NavLink className="nav-link" to="/create-url">
+                      Create URL
+                    </NavLink>
+                  </button>
+                  <button className="btn btn-danger my-2">
+                    <NavLink className="nav-link" to="/all-url">
+                      View all URLs
+                    </NavLink>
+                  </button>
+                </div>
+              </div>
+              <div className="col-md-8 col-sm-12">
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  <h6>Today : {urlList.length > 0 ? urlList.length : "-"} </h6>
+                  <div className="w-75 overflow-auto">
+                    {urlList.length ? (
+                      <table className="table table-success table-striped table-responsive-md mt-3 ">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Short URL</th>
+                            <th scope="col">clicked</th>
+                            <th scope="col">LongURL</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {urlList.map((el, i) => (
+                            <tr key={el.urlID}>
+                              <th scope="row">{i + 1}</th>
+                              <td>{el.createdOn}</td>
+                              <td>
+                                <a
+                                  id={el.urlID}
+                                  className="text-decoration-none"
+                                  href={`/${el.urlID}`}
+                                  onClick={handleCount}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {el.shortURL}
+                                </a>{" "}
+                              </td>
+                              <td>{el.clicked}</td>
+                              <td title={el.longURL}>
+                                {el.longURL.toString().substring(0, 20) + "..."}{" "}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row gx-3">
+              <AllURL />
+            </div>
           </div>
-
-          </div>
-          <div className='col-md-8 col-sm-12'>
-          <div className='d-flex flex-column justify-content-center align-items-center'>
-          <h6>Today : {urlList.length > 0 ? urlList.length : "-"} </h6> 
-          <div className='w-75 overflow-auto'>
-
-              { urlList.length ?
-                <table className="table table-success table-striped table-responsive-md mt-3 "> 
-                <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Short URL</th>
-                  <th scope="col">clicked</th>
-                  <th scope="col">LongURL</th>
-                </tr>
-              </thead>
-              <tbody>
-                { urlList.map((el,i) => 
-                <tr key={el.urlID}>
-                  <th scope="row">{i+1}</th>
-                  <td>{el.createdOn}</td>
-                  <td><a id={el.urlID} className='text-decoration-none' href={`/${el.urlID}`} onClick={handleCount} target="_blank" rel="noreferrer" >{el.shortURL}</a> </td>
-                  <td>{el.clicked}</td>
-                  <td title={el.longURL}>{el.longURL.substring(0,20)+"..."} </td>
-                </tr>
-                )}
-                </tbody>
-                </table>
-              : ""}
-          </div> 
-          </div>
-          </div>
-        </div>
-        <div className='row gx-3'>
-          <AllURL />
-        </div>
-       </div>
-       
-       } 
-
-</div>
+        )}
+      </div>
     </>
-  )
+  );
 }
 
 export default DashboardURL;
