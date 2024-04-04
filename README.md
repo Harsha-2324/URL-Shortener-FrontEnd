@@ -68,7 +68,7 @@ https://github.com/Harsha-2324/URL-Shortener-FrontEnd/assets/24225236/d83faa23-3
 - **MongoDB Integration**: Integration with MongoDB for efficient data storage.
 
 
-## Technologies Used Technologies Used in FrontEnd and BackEnd 🌐
+## Technologies Used in FrontEnd and BackEnd 🌐
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
